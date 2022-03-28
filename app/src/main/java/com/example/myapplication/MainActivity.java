@@ -56,18 +56,18 @@ public class MainActivity extends AppCompatActivity {
         recipeList.hasFixedSize();
         recipeList.setLayoutManager(new LinearLayoutManager(this));
 
-        ArrayList<Recipe> recipes = new ArrayList<>();
+        recipeViewModel.insert(new Recipe("Thai Meatballs", "Thai", R.drawable.thai_meatballs, 30, 4, "1. Make 10 meatballs, remember to add salt and pepper."));
+        recipeViewModel.insert(new Recipe("Chicken Chausser", "French", R.drawable.chicken_chausser, 40, 5, "1. Make 10 meatballs, remember to add salt and pepper."));
+        recipeViewModel.insert(new Recipe("Massaman Curry", "Indian", R.drawable.massaman, 50, 4, "1. Make 10 meatballs, remember to add salt and pepper."));
+        recipeViewModel.insert(new Recipe("Carbonara", "Italian", R.drawable.carbonara, 20, 3, "1. Make 10 meatballs, remember to add salt and pepper."));
+        recipeViewModel.insert(new Recipe("Vietnamese Pho", "Vietnamese", R.drawable.vietnamese_pho, 60, 4, "1. Make 10 meatballs, remember to add salt and pepper."));
+        recipeViewModel.insert(new Recipe("Thai Meatballs", "Thai", R.drawable.thai_meatballs, 30, 4, "1. Make 10 meatballs, remember to add salt and pepper."));
+        recipeViewModel.insert(new Recipe("Chicken Chausser", "French", R.drawable.chicken_chausser, 40, 5, "1. Make 10 meatballs, remember to add salt and pepper."));
+        recipeViewModel.insert(new Recipe("Massaman Curry", "Indian", R.drawable.massaman, 50, 4, "1. Make 10 meatballs, remember to add salt and pepper."));
+        recipeViewModel.insert(new Recipe("Carbonara", "Italian", R.drawable.carbonara, 20, 3, "1. Make 10 meatballs, remember to add salt and pepper."));
+        recipeViewModel.insert(new Recipe("Vietnamese Pho", "Vietnamese", R.drawable.vietnamese_pho, 60, 4, "1. Make 10 meatballs, remember to add salt and pepper."));
 
-        recipeViewModel.insert(new Recipe("Thai Meatballs", "Thai", R.drawable.thai_meatballs, 30, 4, "1. Make 10 meatballs, remember to add salt and pepper."));
-        recipeViewModel.insert(new Recipe("Chicken Chausser", "French", R.drawable.chicken_chausser, 40, 5, "1. Make 10 meatballs, remember to add salt and pepper."));
-        recipeViewModel.insert(new Recipe("Massaman Curry", "Indian", R.drawable.massaman, 50, 4, "1. Make 10 meatballs, remember to add salt and pepper."));
-        recipeViewModel.insert(new Recipe("Carbonara", "Italian", R.drawable.carbonara, 20, 3, "1. Make 10 meatballs, remember to add salt and pepper."));
-        recipeViewModel.insert(new Recipe("Vietnamese Pho", "Vietnamese", R.drawable.vietnamese_pho, 60, 4, "1. Make 10 meatballs, remember to add salt and pepper."));
-        recipeViewModel.insert(new Recipe("Thai Meatballs", "Thai", R.drawable.thai_meatballs, 30, 4, "1. Make 10 meatballs, remember to add salt and pepper."));
-        recipeViewModel.insert(new Recipe("Chicken Chausser", "French", R.drawable.chicken_chausser, 40, 5, "1. Make 10 meatballs, remember to add salt and pepper."));
-        recipeViewModel.insert(new Recipe("Massaman Curry", "Indian", R.drawable.massaman, 50, 4, "1. Make 10 meatballs, remember to add salt and pepper."));
-        recipeViewModel.insert(new Recipe("Carbonara", "Italian", R.drawable.carbonara, 20, 3, "1. Make 10 meatballs, remember to add salt and pepper."));
-        recipeViewModel.insert(new Recipe("Vietnamese Pho", "Vietnamese", R.drawable.vietnamese_pho, 60, 4, "1. Make 10 meatballs, remember to add salt and pepper."));
+        ArrayList<Recipe> recipes = recipeViewModel.getAllRecipes().getValue();
 
         recipeAdapter = new RecipeAdapter(recipes);
         recipeList.setAdapter(recipeAdapter);

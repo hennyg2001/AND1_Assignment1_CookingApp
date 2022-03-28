@@ -14,10 +14,9 @@ import java.util.ArrayList;
 public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder> {
 
     private ArrayList<Recipe> recipes;
-    private RecipeRepository repository;
 
     RecipeAdapter(ArrayList<Recipe> recipes) {
-        this.recipes = repository.getInstance().getAllRecipes().getValue();
+        this.recipes = new ArrayList<>();
     }
 
     private OnClickListener listener;
